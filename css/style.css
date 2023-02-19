@@ -1,19 +1,110 @@
 *{
-    box-sizing: border-box;
+    box-sizing: border-box; /*Delimita los margenes y hace que el espacio maximo sea fijo y no crezca con la modificacion interna */
+}
+
+a
+{
+    display: inline-block;
+    font-family: "Roboto";
+}
+
+body
+{
+    font-family: "Roboto";
+    font-size: 13px;
 }
 
 p
 {
     color: black;
-    background-color: blue;
+}
+
+
+header
+{
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background-color: white;
+}
+
+
+header .container
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+header .container .logo
+{
+    width: 120px;
+}
+
+header .container a
+{
+    color: red;
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.boton
+{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+
+.boton.boton-rojo /*si las clases no llevan espacio aplican para las dos clases en este caso para la clase boton y boton-rojo si estuvieran separados solo aplica la para la clase boton-rojo que está dentro de boton*/
+{
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 .container
 {
-
+    width: 1140px;
+    margin: 0 auto 0 auto;
+    padding: 0 15px;
 }
+
 
 #inicio
 {
+    position: relative;   /*Se pueden mover los elementos y el espacio original que ocupaba se mantiene*/
+                             /*En una posicion absoluta al mover los elementos la posicion original no se mantiene y se recorre todo*/
+}
 
+#inicio img
+{
+    width: 100%;
+    display: block;
+}
+
+#inicio .bloque-inicio
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    text-align: center;
+    margin-left: -200px;
+}
+
+#inicio .bloque-inicio h1
+{
+    color: white;
+    font-size: 35px;
+}
+
+#inicio .bloque-inicio p
+{
+    color: white;
+    font-size: 16px;
 }
