@@ -56,6 +56,7 @@ header .container nav a
 header .container .hamb
 {
     display: none;
+    position: relative;
 }
 
 footer
@@ -474,6 +475,13 @@ footer a
         transition: all 0.4s ease;
         transform: translateX(100%);
     }
+
+
+    header .container nav.open
+    {
+        transform: translateX(0);
+    }
+
 
     header .container nav a
     {
